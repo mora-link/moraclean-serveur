@@ -35,11 +35,8 @@ build:rubocop:
   stage: build
   cache:
     policy: pull-push
-  script:
-    - bundle exec rubocop
 
 test:rspec:
   extends: .base_db
   stage: test
   script:
-    - SPEC_OPTS="--tag ~focus" bundle exec rspec spec
