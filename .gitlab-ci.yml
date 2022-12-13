@@ -1,6 +1,5 @@
 stages:
   - build
-  - test
 
 .base:
   image: ruby:3.0.4
@@ -29,14 +28,3 @@ stages:
     - bundle install --jobs $(nproc) "${FLAGS[@]}" --path=vendor --without development production
     - bin/rails db:create db:migrate
     - bin/rails db:seed
-
-build:rubocop:
-  extends: .base
-  stage: build
-  cache:
-    policy: pull-push
-
-test:rspec:
-  extends: .base_db
-  stage: test
-  script:
