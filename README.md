@@ -5,7 +5,7 @@ Mise en place d'une application de gestion de passage pour les piscinistes.
 Pour télécharger le projet
 
 ```bash
-git clone xxxxxx
+git clone git@gitlab.com:moraclean/moraclean-serveur.git
 ```
 
 ## Sommaire
