@@ -3,7 +3,7 @@ stages:
   - test
 
 .base:
-  image: ruby:3.0.5
+  image: ruby:3.0.4
   cache:
     key: gems_and_packages
     paths:
